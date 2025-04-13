@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./sanitize.css" />
+  </head>
+
+  <body>
+    <!-- title -->
+    <header class="header">
+      <div class="title">
+        <h1>Yahtzee score sheet</h1>
+        <img src="./images/dices.png" width="50" height="50" alt="dices" />
+      </div>
+      <button type="button" class="reset_button" id="reset_button">reset</button>
+    </header>
+
+
+    <!-- Table -->
+    <section class="score-table">
+      <table class="table">
+        
+        <!-- column heading -->
+        <tr class="column-heading">
+          <th></th>
+          <td class="score-caption">How to score</td>
+          <td>Player1</td>
+          <td>Player2</td>
+        </tr>
+
+        <tr class="upper row">
+          <th>
+            <div class="row-index-box">
+              <p>Ones</p>
+              <img src="./images/dice1.png" width="25" height="25" alt="dice One" />
+            </div>
+          </th>
+          <td class="score-caption">count and add only ones</td>
+          <td>
+            <div class="score-box">
+              <button class="minus button">－</button>
+              <input type="text" class="score" value="" step="1" min="0" max="6" id="P1-upper-score1"></input>
+              <button class="plus button">＋</button>
+            </div>
+          </td>
+          <td>
+            <div class="score-box">
+              <button class="minus button">－</button>
+              <input type="text" class="score" value="" step="1" min="0" max="6" id="P2-upper-score1"></input>
+              <button class="plus button">＋</button>
+            </div>
+          </td>
+        </tr>
+
+        <tr class="upper row">
+          <th>
+            <div class="row-index-box">
+              <p>Twos</p>
+              <img src="./images/dice2.png" width="25" height="25" alt="dice Two" />
+            </div>
+          </th>
+          <td class="score-caption">count and add only Twos</td>
+          <td>
+            <div class="score-box">
+              <button class="minus button">－</button>
+              <input type="text" class="score" value="" step="2" min="0" max="10" id="P1-upper-score2"></input>
+              <button class="plus button">＋</button>
+            </div>
+          </td>
+          <td>
+            <div class="score-box">
+              <button class="minus button">－</button>
+              <input type="text" class="score" value="" step="2" min="0" max="10" id="P2-upper-score2"></input>
+              <button class="plus button">＋</button>
+            </div>
+          </td>
+        </tr>
+
+        <tr class="upper row">
+          <th>
+            <div class="row-index-box">
+              <p>Threes</p>
+              <img src="./images/dice3.png" width="25" height="25" alt="dice Three" />
+            </div>
+          </th>
+          <td class="score-caption">count and add only Threes</td>
+          <td>
+            <div class="score-box">
+              <button class="minus button">－</button>
+              <input type="text" class="score" value="" step="3" min="0" max="15" id="P1-upper-score3"></input>
+              <button class="plus button">＋</button>
+            </div>
+          </td>
+          <td>
+            <div class="score-box">
+              <button class="minus button">－</button>
+              <input type="text" class="score" value="" step="3" min="0" max="15" id="P2-upper-score3"></input>
+              <button class="plus button">＋</button>
+            </div>
+          </td>
+        </tr>
+
+        <tr class="upper row">
+          <th>
+            <div class="row-index-box">
+              <p>Fours</p>
+              <img src="./images/dice4.png" width="25" height="25" alt="dice Four" />
+            </div>
+          </th>
+          <td class="score-caption">count and add only Fours</td>
+          <td>
+            <div class="score-box">
+              <button class="minus button">－</button>
+              <input type="text" class="score" value="" step="4" min="0" max="20" id="P1-upper-score4"></input>
+              <button class="plus button">＋</button>
+            </div>
+          </td>
+          <td>
+            <div class="score-box">
+              <button class="minus button">－</button>
+              <input type="text" class="score" value="" step="4" min="0" max="20" id="P2-upper-score4"></input>
+              <button class="plus button">＋</button>
+            </div>
+          </td>
+        </tr>
+
+        <tr class="upper row">
+          <th>
+            <div class="row-index-box">
+              <p>Fives</p>
+              <img src="./images/dice5.png" width="25" height="25" alt="dice Five" />
+            </div>
+          </th>
+          <td class="score-caption">count and add only Fives</td>
+          <td>
+            <div class="score-box">
+              <button class="minus button">－</button>
+              <input type="text" class="score" value="" step="5" min="0" max="25" id="P1-upper-score5"></input>
+              <button class="plus button">＋</button>
+            </div>
+          </td>
+          <td>
+            <div class="score-box">
+              <button class="minus button">－</button>
+              <input type="text" class="score" value="" step="5" min="0" max="25" id="P2-upper-score5"></input>
+              <button class="plus button">＋</button>
+            </div>
+          </td>
+        </tr>
+
+        <tr class="upper row">
+          <th>
+            <div class="row-index-box">
+              <p>Sixes</p>
+              <img src="./images/dice6.png" width="25" height="25" alt="dice Six" />
+            </div>
+          </th>
+          <td class="score-caption">count and add only Sixes</td>
+          <td>
+            <div class="score-box">
+              <button class="minus button">－</button>
+              <input type="text" class="score" value="" step="6" min="0" max="30" id="P1-upper-score6"></input>
+              <button class="plus button">＋</button>
+            </div>
+          </td>
+          <td>
+            <div class="score-box">
+              <button class="minus button">－</button>
+              <input type="text" class="score" value="" step="6" min="0" max="30" id="P2-upper-score6"></input>
+              <button class="plus button">＋</button>
+            </div>
+          </td>
+        </tr>
+
+        <!-- UPPER TOTAL -->
+        <tr class="upper total" id="upper_score">
+          <th>UPPER SCORE</th>
+          <td class="score-caption">-</td>
+          <td class="P1-upper_score" id="P1-upper_score">0</td>
+          <td class="P2-upper_score" id="P2-upper_score">0</td>
+        </tr>
+
+        <tr class="upper total" id="bonus">
+          <th>BONUS</th>
+          <td class="score-caption">score 35</td>
+          <td class="P1-bonus" id="P1-bonus">0</td>
+          <td class="P2-bonus" id="P2-bonus">0</td>
+        </tr>
+
+        <tr class="upper total" id="upper_total">
+          <th>UPPER TOTAL</th>
+          <td class="score-caption">-</td>
+          <td class="P1-upper_total" id="P1-upper_total">0</td>
+          <td class="P2-upper_total" id="P2-upper_total">0</td>
+        </tr>
+
+        <!-- LOWER SCORE -->
+        <tr class="lower row">
+          <th>3 of a kind</th>
+          <td class="score-caption">add total of all dice</td>
+          <td>
+            <div class="score-box">
+              <button class="minus button">－</button>
+              <input class="score" value="" step="1" min="0" max="30" id="P1-lower-score3K"></input>
+              <button class="plus button">＋</button>
+            </div>
+          </td>
+          <td>
+            <div class="score-box">
+              <button class="minus button">－</button>
+              <input class="score" value="" step="1" min="0" max="30" id="P2-lower-score3K"></input>
+              <button class="plus button">＋</button>
+            </div>
+          </td>
+        </tr>
+
+        <tr class="lower row">
+          <th>4 of a kind</th>
+          <td class="score-caption">add total of all dice</td>
+          <td>
+            <div class="score-box">
+              <button class="minus button">－</button>
+              <input class="score" value="" step="1" min="0" max="30" id="P1-lower-score4K"></input>
+              <button class="plus button">＋</button>
+            </div>
+          </td>
+          <td>
+            <div class="score-box">
+              <button class="minus button">－</button>
+              <input class="score" value="" step="1" min="0" max="30" id="P2-lower-score4K"></input>
+              <button class="plus button">＋</button>
+            </div>
+          </td>
+        </tr>
+
+        <tr class="lower row">
+          <th>Full House</th>
+          <td class="score-caption">score 25</td>
+          <td>
+            <div class="score-box">
+              <button class="minus button">－</button>
+              <input class="score" value="" step="25" min="0" max="25" id="P1-lower-score25"></input>
+              <button class="plus button">＋</button>
+            </div>
+          </td>
+          <td>
+            <div class="score-box">
+              <button class="minus button">－</button>
+              <input class="score" value="" step="25" min="0" max="25" id="P2-lower-score25"></input>
+              <button class="plus button">＋</button>
+            </div>
+          </td>
+        </tr>
+
+        <tr class="lower row">
+          <th>Small Straight</th>
+          <td class="score-caption">score 30</td>
+          <td>
+            <div class="score-box">
+              <button class="minus button">－</button>
+              <input class="score" value="" step="30" min="0" max="30" id="P1-lower-score30"></input>
+              <button class="plus button">＋</button>
+            </div>
+          </td>
+          <td>
+            <div class="score-box">
+              <button class="minus button">－</button>
+              <input class="score" value="" step="30" min="0" max="30" id="P2-lower-score30"></input>
+              <button class="plus button">＋</button>
+            </div>
+          </td>
+        </tr>
+
+        <tr class="lower row">
+          <th>Large Straight</th>
+          <td class="score-caption">score 40</td>
+          <td>
+            <div class="score-box">
+              <button class="minus button">－</button>
+              <input class="score" value="" step="40" min="0" max="40" id="P1-lower-score40"></input>
+              <button class="plus button">＋</button>
+            </div>
+          </td>
+          <td>
+            <div class="score-box">
+              <button class="minus button">－</button>
+              <input class="score" value="" step="40" min="0" max="40" id="P2-lower-score40"></input>
+              <button class="plus button">＋</button>
+            </div>
+          </td>
+        </tr>
+
+        <tr class="lower row">
+          <th>YAHTZEE</th>
+          <td class="score-caption">score 50</td>
+          <td>
+            <div class="score-box">
+              <button class="minus button">－</button>
+              <input class="score" value="" step="50" min="0" max="50" id="P1-lower-score50"></input>
+              <button class="plus button">＋</button>
+            </div>
+          </td>
+          <td>
+            <div class="score-box">
+              <button class="minus button">－</button>
+              <input class="score" value="" step="50" min="0" max="50" id="P2-lower-score50"></input>
+              <button class="plus button">＋</button>
+            </div>
+          </td>
+        </tr>
+
+        <tr class="lower row">
+          <th>Chance</th>
+          <td class="score-caption">total of all 5 dice</td>
+          <td>
+            <div class="score-box">
+              <button class="minus button">－</button>
+              <input class="score" value="" step="1" min="0" max="30" id="P1-lower-scoreCH"></input>
+              <button class="plus button">＋</button>
+            </div>
+          </td>
+          <td>
+            <div class="score-box">
+              <button class="minus button">－</button>
+              <input class="score" value="" step="1" min="0" max="30" id="P2-lower-scoreCH"></input>
+              <button class="plus button">＋</button>
+            </div>
+          </td>
+        </tr>
+
+        <tr class="lower row">
+          <th>YAHTZEE BONUS</th>
+          <td class="score-caption">score 100 each</td>
+          <td>
+            <div class="score-box-YB">
+              <div class="checkbox-container">
+                <input class="checkbox YB" type="checkbox" id="P1-YB_checkbox1" />
+                <input class="checkbox YB" type="checkbox" id="P1-YB_checkbox2" />
+                <input class="checkbox YB" type="checkbox" id="P1-YB_checkbox3" />
+                <input class="checkbox YB" type="checkbox" id="P1-YB_checkbox4" />
+                <input class="checkbox YB" type="checkbox" id="P1-YB_checkbox5" />
+              </div>
+              <input class="score YB" value="" step="100" min="0" max="" id="P1-lower-score100"></input>
+            </div>
+          </td>
+          <td>
+            <div class="score-box-YB">
+              <div class="checkbox-container">
+                <input class="checkbox YB" type="checkbox" id="P2-YB_checkbox1" />
+                <input class="checkbox YB" type="checkbox" id="P2-YB_checkbox2" />
+                <input class="checkbox YB" type="checkbox" id="P2-YB_checkbox3" />
+                <input class="checkbox YB" type="checkbox" id="P2-YB_checkbox4" />
+                <input class="checkbox YB" type="checkbox" id="P2-YB_checkbox5" />
+              </div>
+              <input class="score YB" value="" step="100" min="0" max="" id="P2-lower-score100"></input>
+            </div>
+          </td>
+        </tr>
+
+        <!-- LOWER TOTAL -->
+        <tr class="lower total" id="lower_total">
+          <th>LOWER TOTAL</th>
+          <td class="score-caption">-</td>
+          <td class="P1-lower_total" id="P1-lower_total">0</td>
+          <td class="P2-lower_total" id="P2-lower_total">0</td>
+        </tr>
+        <tr class="grand total" id="grand_total">
+          <th>GRAND TOTAL</th>
+          <td class="score-caption">-</td>
+          <td class="P1-grand_total" id="P1-grand_total">0</td>
+          <td class="P1-grand_total" id="P2-grand_total">0</td>
+        </tr>
+      </table>
+
+    </section>
+
+    <script src="./updatescore.js"></script>
+    <script src="./reset.js"></script>
+  </body>
+</html>
