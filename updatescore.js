@@ -31,7 +31,6 @@
         $grand_total.textContent = Number($upper_total.textContent) + Number($lower_total.textContent);
     };
 
-
     // plus/minusボタンをクリックするとスコアが反映される関数
     const $buttons = document.querySelectorAll(`[class*='minus'], [class*='plus']`);
 
@@ -44,17 +43,18 @@
             let t = Number(get_target.value);
             if (isNaN(t)) t = 0;
 
-            console.log(get_target.max);
-            console.log();
-
             const plus_calc = () => {
-                if (get_target.value < Number(get_target.max)) {
-                    get_target.value = t + Number(get_target.step);
+                if (get_target.value < 0) {
+                    get_target.value = 0;
+                } else if (get_target.value < Number(get_target.max)) {
+                    get_target.value = t + (Number(get_target.step) - t % Number(get_target.step));
                 }
             };
             const minus_calc = () => {
-                if (get_target.value > Number(get_target.min)) {
-                    get_target.value = t - Number(get_target.step);
+                if (get_target.value === "" || get_target.value < 0) {
+                    get_target.value = 0;
+                } else if (get_target.value > Number(get_target.min)) {
+                    t % Number(get_target.step) === 0 ? get_target.value = t - Number(get_target.step) : get_target.value = t - (t % Number(get_target.step));
                 }
             };
 
@@ -67,8 +67,21 @@
             update_total(player_num);
         });
     }
-        
 
+    // inputでトータルを更新
+    const $input_scores = document.getElementsByClassName('score');
+
+    for (let i = 0; i < $input_scores.length; i++) {
+        $input_scores[i].addEventListener('input', (e) => {
+            // currentTargetの要素の中からplayer名を取得（P1orP2）
+            const event_id = e.target.id;
+            const player_num = event_id.slice(0,2);
+
+            update_total(player_num);
+        });
+    }
+
+    // YB BONUSのcheckboxによるスコア更新
     const update_YB_checkbox = (player) => {
         let count = 0;
         const $P_checkbox = document.querySelectorAll(`[id*="${player}-YB_checkbox"]`); 
@@ -84,7 +97,7 @@
 
     for (let i = 0; i < $YB_checkboxes.length; i++) {
         $YB_checkboxes[i].addEventListener('change', (e) => {
-            const event_id = e.currentTarget.id;
+            const event_id = e.target.id;
             const player_num = event_id.slice(0,2);
             
             update_YB_checkbox(player_num);
