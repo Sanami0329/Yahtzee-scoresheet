@@ -19,6 +19,8 @@
         const $bonus = document.getElementById(`${player}-bonus`);
         if (Number($upper_score.textContent) >= 63) {
             $bonus.textContent = 35;
+        } else {
+            $bonus.textContent = 0;
         }
         // upper total
         const $upper_total = document.getElementById(`${player}-upper_total`);
