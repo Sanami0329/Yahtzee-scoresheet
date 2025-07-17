@@ -2,8 +2,8 @@ https://yahtzee-scoresheet-sk.netlify.app/
 
 <img src="https://img.shields.io/badge/Javascript-276DC3.svg?logo=javascript&style=flat"> <img src="https://img.shields.io/badge/-HTML5-333.svg?logo=html5&style=flat"> <img src="https://img.shields.io/badge/-CSS3-1572B6.svg?logo=css3&style=flat">
 
-# Yahtzee score sheet
-Yahtzee score sheetは、2人でYahtzeeを楽しむ際に使えるスコアシートです。  
+# Yahtzee score sheetの概要/About Yahtzee score sheet 
+Yahtzee score sheetは、2人でYahtzee（ヤッツィー）を楽しむ際に使えるスコアシートです。  
 "Yahtzee score sheet" is designed for playing Yahtzee with two people.
 
 
