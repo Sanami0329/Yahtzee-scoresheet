@@ -22,4 +22,4 @@ To add or subtract points, press the +/- button or enter the score directly into
 After you enter the score, the total is calculated automatically.  
 
 
-https://github.com/user-attachments/assets/e2c8eb6a-a966-40ae-a856-b3a28444f79c
+https://github.com/user-attachments/assets/1d1b6d1e-dafb-4c83-8570-8c143b7a0f4f
